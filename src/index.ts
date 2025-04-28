@@ -13,7 +13,7 @@ const server = http.createServer(app);
 app.use(
   cors({
     credentials: true,
-    origin: process.env.FE_ORIGIN?.split(','),
+    origin: process.env.FE_ORIGIN,
   }),
 );
 
