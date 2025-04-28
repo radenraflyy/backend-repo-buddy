@@ -1,0 +1,42 @@
+{
+  "name": "backend-repo",
+  "version": "0.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "npx swc src -d dist",
+    "dev": "npx nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write \"**/*.{mjs,js,ts,md}\" --config .prettierrc"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1",
+    "nodemon": "^3.1.10"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.1",
+    "@swc-node/register": "^1.10.10",
+    "@swc/cli": "^0.7.3",
+    "@swc/core": "^1.11.22",
+    "@types/dotenv": "^8.2.3",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.3",
+    "eslint": "^9.25.1",
+    "eslint-plugin-prettier": "^5.2.6",
+    "globals": "^16.0.0",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.5.3",
+    "swc": "^1.0.11",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.31.0"
+  },
+  "lint-staged": {
+    "*.{ts}": "eslint --fix"
+  }
+}
