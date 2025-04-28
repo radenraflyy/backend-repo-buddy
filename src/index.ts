@@ -3,9 +3,11 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import http from 'http';
 import cors from 'cors';
+import dotenv from 'dotenv';
+import 'dotenv/config';
 
-var router = require('./routes/index');
-
+import router from '@/routes/index.routes';
+dotenv.config();
 const PORT = process.env.PORT || 3001;
 
 const app: Express = express();
