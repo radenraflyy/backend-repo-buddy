@@ -1,0 +1,23 @@
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
+// import * as admin from 'firebase-admin';
+// import path from 'path';
+
+const firebaseConfig = {
+  apiKey: process.env.API_KEY_FIREBASE,
+  authDomain: process.env.AUTH_DOMAIN_FIREBASE,
+  projectId: process.env.PROJECT_ID_FIREBASE,
+  storageBucket: process.env.STORAGE_BUCKET_FIREBASE,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID_FIREBASE,
+  appId: process.env.APP_ID_FIREBASE,
+};
+
+const appConfig = initializeApp(firebaseConfig);
+const db = getFirestore(appConfig);
+
+// const serviceAccount = path.join(__dirname, './adminSdkKey.json');
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount),
+// });
+
+export default db;

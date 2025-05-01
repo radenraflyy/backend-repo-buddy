@@ -7,10 +7,11 @@
     "allowSyntheticDefaultImports": true,
     "target": "ESNext",
     "outDir": "./dist",
-    "baseUrl": "./",
+    "baseUrl": ".",
     "incremental": true,
     "skipLibCheck": true,
     "noErrorTruncation": true,
+    "noUnusedParameters": false,
     "paths": {
       "@/*": ["./src/*"]
     }
