@@ -4,6 +4,6 @@ const userRouter = express.Router();
 
 userRouter.get('/', UserController.fetchUserData);
 userRouter.post('/', UserController.createUsers);
-userRouter.put('/:id', UserController.updateUsers);
+userRouter.patch('/:id', UserController.updateUsers);
 
 export default userRouter;
